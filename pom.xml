@@ -195,6 +195,11 @@
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-surefire-plugin</artifactId>
                 <version>${plugin.version.maven-surefire-plugin}</version>
+                <configuration>
+                    <argLine>
+                        --add-opens voidframework.core/dev.voidframework.core=ALL-UNNAMED
+                    </argLine>
+                </configuration>
             </plugin>
             <plugin>
                 <groupId>org.sonatype.plugins</groupId>

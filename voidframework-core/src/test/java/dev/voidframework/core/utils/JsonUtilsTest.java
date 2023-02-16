@@ -371,7 +371,9 @@ final class JsonUtilsTest {
     /**
      * Simple DTO.
      */
-    public record SimpleDto(String hello) {
+    public static final class SimpleDto {
+
+        public final String hello;
 
         @JsonCreator
         public SimpleDto(@JsonProperty("hello") final String hello) {
